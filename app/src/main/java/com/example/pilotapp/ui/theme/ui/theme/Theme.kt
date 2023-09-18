@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import com.example.pilotapp.ui.theme.NewCyan
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -22,7 +23,7 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
+    primary = NewCyan,
     secondary = PurpleGrey40,
     tertiary = Pink40
 

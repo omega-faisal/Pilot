@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +15,33 @@
         android:theme="@style/Theme.PilotApp"
         tools:targetApi="31">
         <activity
-            android:name=".ui.theme.SearchActivity"
+            android:name=".ui.theme.AboutActivity"
+            android:exported="false"
+            android:label="@string/title_activity_about"
+            android:theme="@style/Theme.PilotApp" />
+        <activity
+            android:name=".ui.theme.QuestionsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_questions"
+            android:theme="@style/Theme.PilotApp" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.PilotApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.theme.CandlestickActivity"
+            android:exported="false"
+            android:label="@string/title_activity_candlestick"
+            android:theme="@style/Theme.PilotApp" />
+        <activity
+            android:name=".ui.theme.ChartsAndCandles"
             android:exported="false"
             android:label="@string/title_activity_search"
             android:theme="@style/Theme.PilotApp" />

@@ -1,4 +1,8 @@
 <resources>
-    <string name="app_name">PilotApp</string>
+    <string name="app_name">Pilot</string>
     <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_candlestick">CandlestickActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_questions">QuestionsActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
 </resources>

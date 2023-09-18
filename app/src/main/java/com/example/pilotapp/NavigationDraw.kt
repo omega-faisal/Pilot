@@ -1,5 +1,6 @@
 package com.example.pilotapp
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -37,27 +38,27 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 
+@SuppressLint("SuspiciousIndentation")
 @Composable
 fun DrawerHeader(modifier: Modifier = Modifier) {
-    val painterr = painterResource(id = R.drawable.backggnd_image)
-    // TODO- to be replaced by the background image of our app header
-    Card(
-        modifier.fillMaxWidth().fillMaxHeight(0.232f),
-        shape = RectangleShape,
-        elevation = 5.dp
-    )
-    {
+    val painterr = painterResource(id = R.drawable.pilothead)
+//    Card(
+//        modifier.fillMaxWidth().fillMaxHeight(0.232f),
+//        shape = RectangleShape,
+//        elevation = 5.dp
+//    )
+//    {
         Box(
-            Modifier.fillMaxSize()
-
+            modifier.fillMaxWidth().fillMaxHeight(0.232f)
         ) {
             Image(
                 painter = painterr, contentDescription = null,
-                contentScale = ContentScale.Fit
+                Modifier.fillMaxSize(),
+                contentScale = ContentScale.Inside
             )
         }
     }
-}
+//}
 
 
 
@@ -66,7 +67,7 @@ fun DrawerBody(
     items: List<MenuItem>, modifier: Modifier = Modifier,
     itemtextStyle: TextStyle = TextStyle(
         fontSize = 18.sp,
-        color = Color(0xFF023047),
+        color = Color.Black,
         fontWeight = FontWeight.SemiBold
     ),
     onItemClick: (MenuItem) -> Unit
@@ -84,7 +85,7 @@ fun DrawerBody(
                     .padding(horizontal = 5.dp)
             )
             {
-                Icon(imageVector = item.icon, contentDescription = item.description)
+                Icon(imageVector = item.icon, contentDescription = item.description,tint =Color(0xff01ACAD))
 
                 Spacer(modifier = Modifier.width(8.dp))
 
